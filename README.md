@@ -25,10 +25,11 @@ module half_adder (
     output wire Sum,
     output wire Carry
 );
+   
     assign Sum   = A ^ B;   // XOR
     assign Carry = A & B;   // AND
 endmodule
- 
+
 module half_subtractor (
     input  wire A,
     input  wire B,
@@ -52,6 +53,7 @@ module tb3;
         .Sum(Sum),
         .Carry(Carry)
     );
+    
     // Instantiate the Half Subtractor
     half_subtractor hs_uut (
         .A(A),
